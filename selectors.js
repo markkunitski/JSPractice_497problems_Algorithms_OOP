@@ -1,3 +1,4 @@
+export const inp1 = document.getElementById("in1");
 export const inp2 = document.getElementById("in2");
 export const inps = document.querySelectorAll("input");
 export const p1 = document.getElementById("p1");

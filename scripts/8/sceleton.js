@@ -5,12 +5,12 @@ btn.addEventListener("click", function () {
     
 });
 2;
-// btn.addEventListener('click', function () {})
+// selectors.btn.addEventListener('click', function () {})
 3;
-// btn.addEventListener('click', function () {})
+// selectors.btn.addEventListener('click', function () {})
 4;
-// btn.addEventListener('click', function () {})
+// selectors.btn.addEventListener('click', function () {})
 5;
-// btn.addEventListener('click', function () {})
+// selectors.btn.addEventListener('click', function () {})
 6;
-// btn.addEventListener('click', function () {})
+// selectors.btn.addEventListener('click', function () {})
