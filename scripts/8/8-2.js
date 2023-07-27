@@ -81,9 +81,32 @@ function pop(state) {
 // }
 // btn.addEventListener("click", addList);
 3;
-// btn.addEventListener('click', function () {})
+// let data = [
+//   [1, 2, 3],
+//   [4, 5, 6],
+//   [7, 8, 9],
+// ];
+
+// function sumArr(arr) {
+//   let result = [];
+//   arr.map(String);
+//   arr.forEach((elem) => {
+//     result.push(elem.reduce((acc, curr) => acc + curr, ""));
+//   });
+//   console.log(result) ;
+// }
+// btn.addEventListener("click", () => sumArr(data));
 4;
-// btn.addEventListener('click', function () {})
+function f4(parent) {
+  if (parent.length >= 5) return parent;
+  let child = "";
+  for (let i = 1; i <= parent.length + 1; i++) {
+    child += "xx";
+  }
+  parent.push(child);
+  return f4(parent);
+}
+btn.addEventListener("click", () => console.log(f4([])));
 5;
 // btn.addEventListener('click', function () {})
 6;
