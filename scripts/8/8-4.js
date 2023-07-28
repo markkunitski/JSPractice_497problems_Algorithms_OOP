@@ -151,21 +151,60 @@ import pop from "../../selectors.js";
 // }
 
 4;
-const f4 = (start, end) => {
-  if (start > end) return;
-  let child = "";
+// const f4 = (start, end) => {
+//   if (start > end) return;
+//   let child = "";
+//   let curr = String(start);
+//   child += curr.padStart(start, curr);
+//   console.log(child);
+//   return f4(start + 1, end);
+// };
+// selectors.btn.addEventListener("click", function () {
+//   f4(1, 9);
+// });
 
-  let curr = String(start);
-  child += curr.padStart(start, curr);
-
-  console.log(child);
-  
-  return f4(start + 1, end);
-};
-selectors.btn.addEventListener("click", function () {
-  f4(1, 9);
-});
 5;
-// selectors.btn.addEventListener('click', function () {})
-6;
-// selectors.btn.addEventListener('click', function () {})
+// let data = [
+//   {
+//     country: "country1",
+//     city: "city11",
+//   },
+//   {
+//     country: "country2",
+//     city: "city21",
+//   },
+//   {
+//     country: "country3",
+//     city: "city31",
+//   },
+//   {
+//     country: "country1",
+//     city: "city12",
+//   },
+//   {
+//     country: "country1",
+//     city: "city13",
+//   },
+//   {
+//     country: "country2",
+//     city: "city22",
+//   },
+//   {
+//     country: "country3",
+//     city: "city31",
+//   },
+// ];
+// selectors.btn.addEventListener("click", function () {
+//   let result = {};
+//   data.forEach((elem) => {
+//     let key = elem.country;
+    
+//     if (result[key] && result[key]!= elem.city) {
+//       result[key].push(elem.city);
+//     } else {
+//       result[key] = [elem.city]
+//     }
+//     console.log(result)
+//   });
+// });
+
