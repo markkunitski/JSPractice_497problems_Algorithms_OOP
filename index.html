@@ -23,12 +23,12 @@
       font-weight: bold;
     }
 
-    /* #div {
-      width: 100px;
+    #div {
+      width: 300px;
       height: 100px;
       border: 1px solid black;
       overflow: hidden;
-    } */
+    }
 
     th {
       border: 1px solid gray;
@@ -63,15 +63,23 @@
       display: block;
       position: absolute;
     }
-    .first {
+    #nested1 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
       background: lightcoral;
       top: 10%;
       left: 0%;
+      cursor: grab;
     }
-    .second {
+    #nested2 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
       background: lightskyblue;
       top: 5%;
       left: 30%;
+      cursor: grab;
     }
     .selected {
       background: lightgreen;
@@ -83,6 +91,38 @@
     .danger {
       background: lightcoral;
     }
+    button {
+      color: wheat;
+      border: none;
+      padding: 12px 32px;
+      background-color: rgb(0, 0, 0);
+      transition: 0.1s ease;
+      border-radius: 4px;
+    }
+    button:hover {
+      cursor: pointer;
+      background-color: rgb(29, 29, 29);
+    }
+    button:active {
+      scale: 0.95;
+    }
+    button:disabled {
+      cursor: default;
+      color: rgb(94, 94, 94);
+      background-color: rgb(138, 138, 138);
+    }
+    .drop {
+      transition: 0.5s ease;
+      background: rgb(0, 0, 0);
+      padding: 5px;
+      color: wheat;
+    }
+    a {
+      color: rgb(22, 0, 0);
+    }
+    a:hover {
+      color: rgb(124, 92, 29);
+    }
   </style>
 
   <body>
@@ -90,20 +130,58 @@
       style="display: flex; align-items: center; flex-direction: column"
       id="root"
     >
+      <nav style="display: flex">
+        <div>
+          <a class="nav" id="a1" href="1.html">1asdas</a>
+          <div class="drop dnone">
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <a class="nav" id="a2" href="2.html">2sagsag</a>
+          <div class="drop dnone">
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <a class="nav" id="a3" href="3.html">3cvbncvn</a>
+          <div class="drop dnone">
+            <ul>
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <input class="test" type="text" id="in1" />
-
+      <input class="test" type="text" id="in2" />
       <button id="btn">click</button>
-      <a id="a1" href="1.html"></a>
-      <a id="a2" href="2.html"></a>
-      <a id="a3" href="3.html"></a>
-      <ul class="ulclass" id="ul"></ul>
-      <p style="margin: 0; padding: 0" id="p1">Lorem ipsum dolor sit amet.</p>
-      <p id="p2"></p>
-      <p id="p3"></p>
-      <div class="" id="div"></div>
-      <!-- <textarea name="" id="area" cols="30" rows="10"></textarea> -->
+
+      <ul class="ulclass" id="ul">
+
+      </ul>
+      <div id="text">
+        <p id="p1">Lorem ipsum dolor sit amet</p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+      </div>
+      <!-- <div class="" id="div">
+        <button id="closure" style="margin: 0; padding: 10px; border-radius: 0">X</button>
+      </div> -->
+      <!-- <div class="nested" id="nested1"></div>
+      <div class="nested" id="nested2"></div> -->
+      <textarea name="" id="area" cols="30" rows="10"></textarea>
     </div>
 
-    <script type="module" src="./scripts/8/8-6.js"></script>
+    <script type="module" src="./scripts/8/8-10.js"></script>
   </body>
 </html>

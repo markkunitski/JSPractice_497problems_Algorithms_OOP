@@ -17,6 +17,8 @@ export const divs = document.querySelectorAll("#div div");
 export const table = document.querySelector('#table');
 export const btns = document.querySelectorAll(".fordivs");
 export const boxes = document.getElementsByClassName("check");
+export const nested1 = document.querySelector('#nested1')
+export const nested2 = document.querySelector('#nested2')
 
 
 export default function pop(state) {
