@@ -58,6 +58,8 @@ import pop from "../../selectors.js";
 //     console.log(copy)
 // });
 4;
-// selectors.btn.addEventListener('click', function () {})
+selectors.btn.addEventListener('click', function () {
+    
+})
 5;
 // selectors.btn.addEventListener('click', function () {})

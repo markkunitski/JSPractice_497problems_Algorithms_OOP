@@ -18,7 +18,7 @@ class LinkedList {
         this.size += 1
     }
     getSize(){
-        return this.size
+       console.log(this.size) 
     }
     print(){
         let result =[]
@@ -45,4 +45,4 @@ List.add(4)
 List.add(6)
 List.add(8)
 
-List.print()
+List.getSize()
