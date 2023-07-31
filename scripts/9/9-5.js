@@ -51,8 +51,22 @@ import pop from "../../selectors.js";
 //   }
 // });
 4;
-// selectors.btn.addEventListener('click', function () {})
+// let forms = ["2", "3", "4"];
+// function printForm(num, imenit, roditel, mnoz) {
+//   let string = String(num);
+//   let last = string[string.length - 1];
+//   let prelast = string[string.length - 2];
+//   if (prelast == 1) return [num, mnoz];
+//   if (last == "1") return [num, imenit];
+//   if (forms.includes(last)) return [num, roditel];
+//   return [num, mnoz];
+// }
+// selectors.btn.addEventListener("click", function () {
+//   for (let i = 0; i <= 22; i++) {
+//     console.log(printForm(i, "яблоко", "яблока", "яблок"));
+//   }
+// });
 5;
-// selectors.btn.addEventListener('click', function () {})
+
 6;
 // selectors.btn.addEventListener('click', function () {})

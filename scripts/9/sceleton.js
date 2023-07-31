@@ -1,7 +1,7 @@
 import * as selectors from '../../selectors.js'
 import pop from '../../selectors.js';
 1;
-btn.addEventListener("click", function () {
+selectors.btn.addEventListener("click", function () {
     
 });
 2;
