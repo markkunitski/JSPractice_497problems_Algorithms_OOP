@@ -24,49 +24,50 @@ import pop from "../../selectors.js";
 //   console.log(firstCol, secondCol);
 // });
 3;
-// STARTER 
-selectors.table.addEventListener("click", function (e) {
-    let top = e.target;
-    let index = [...this.firstElementChild.firstElementChild.children].indexOf(
-      top
-    );
-    let parent = document.querySelectorAll(
-      `#table tr th:nth-child(${index + 1})`
-    );
-    let toSort = [...parent].slice(1);
-  
-    let sortedArr;
-    if (!Number.isNaN(Number(toSort[0].textContent))) {
-      console.log("NUMBER");
-      sortedArr = toSort.sort(
-        (a, b) => Number(a.textContent) - Number(b.textContent)
-      );
-    } else {
-      console.log("STRING");
-      sortedArr = toSort.sort((a, b) =>
-        a.textContent.localeCompare(b.textContent)
-      );
-    }
-    let rows = document.querySelectorAll("#table tr");
-    rows.forEach((row, frameIndex) => {
-      if (frameIndex == 0) return;
-      row.children[index].textContent = sortedArr[frameIndex - 1].textContent;
-    });
-    console.log(parent);
-  });
-    
+// STARTER
+// selectors.table.addEventListener("click", function (e) {
+//     let top = e.target;
+//     let index = [...this.firstElementChild.firstElementChild.children].indexOf(
+//       top
+//     );
+//     let parent = document.querySelectorAll(
+//       `#table tr th:nth-child(${index + 1})`
+//     );
+//     let toSort = [...parent].slice(1);
+
+//     let sortedArr;
+//     if (!Number.isNaN(Number(toSort[0].textContent))) {
+//       console.log("NUMBER");
+//       sortedArr = toSort.sort(
+//         (a, b) => Number(a.textContent) - Number(b.textContent)
+//       );
+//     } else {
+//       console.log("STRING");
+//       sortedArr = toSort.sort((a, b) =>
+//         a.textContent.localeCompare(b.textContent)
+//       );
+//     }
+//     let rows = document.querySelectorAll("#table tr");
+//     rows.forEach((row, frameIndex) => {
+//       if (frameIndex == 0) return;
+//       row.children[index].textContent = sortedArr[frameIndex - 1].textContent;
+//     });
+//     console.log(parent);
+//   });
+
 // EDITED
 selectors.table.addEventListener("click", function (e) {
   let top = e.target;
+  console.log(top.tagName)
+  if (top.tagName != 'TH') return
   let index = [...this.firstElementChild.firstElementChild.children].indexOf(
     top
   );
   let parent = document.querySelectorAll(
-    `#table tr th:nth-child(${index + 1})`
+    `#table tr td:nth-child(${index + 1})`
   );
   let toSort = [];
   parent.forEach((elem, parentIdnex) => {
-    if (parentIdnex == 0) return
     toSort.push(elem.innerText)
   });
   let sortedArr;
@@ -89,42 +90,48 @@ selectors.table.addEventListener("click", function (e) {
   });
   console.log(parent);
 });
-// GPT
-selectors.table.addEventListener("click", function (e) {
-    let top = e.target;
-    let index = [...this.firstElementChild.firstElementChild.children].indexOf(top);
-    let parent = document.querySelectorAll(`#table tr th:nth-child(${index + 1})`);
-    let toSort = [...parent].slice(1);
-  
-    let cellInfoArr = []; // Array to store cell info before sorting
-    toSort.forEach((cell) => {
-      cellInfoArr.push({
-        textContent: cell.textContent,
-        cellRef: cell,
-      });
-    });
-  
-    let sortedArr;
-    if (!Number.isNaN(Number(cellInfoArr[0].textContent))) {
-      console.log("NUMBER");
-      sortedArr = cellInfoArr.sort((a, b) =>
-        Number(a.textContent) - Number(b.textContent)
-      );
-    } else {
-      console.log("STRING");
-      sortedArr = cellInfoArr.sort((a, b) =>
-        a.textContent.localeCompare(b.textContent)
-      );
-    }
-  
-    let rows = document.querySelectorAll("#table tr");
-    rows.forEach((row, frameIndex) => {
-      if (frameIndex === 0) return;
-      row.children[index].textContent = sortedArr[frameIndex - 1].textContent;
-    });
-  });
+// // GPT
+// selectors.table.addEventListener("click", function (e) {
+//     let top = e.target;
+//     let index = [...this.firstElementChild.firstElementChild.children].indexOf(top);
+//     let parent = document.querySelectorAll(`#table tr th:nth-child(${index + 1})`);
+//     let toSort = [...parent].slice(1);
+
+//     let cellInfoArr = []; // Array to store cell info before sorting
+//     toSort.forEach((cell) => {
+//       cellInfoArr.push({
+//         textContent: cell.textContent,
+//         cellRef: cell,
+//       });
+//     });
+
+//     let sortedArr;
+//     if (!Number.isNaN(Number(cellInfoArr[0].textContent))) {
+//       console.log("NUMBER");
+//       sortedArr = cellInfoArr.sort((a, b) =>
+//         Number(a.textContent) - Number(b.textContent)
+//       );
+//     } else {
+//       console.log("STRING");
+//       sortedArr = cellInfoArr.sort((a, b) =>
+//         a.textContent.localeCompare(b.textContent)
+//       );
+//     }
+
+//     let rows = document.querySelectorAll("#table tr");
+//     rows.forEach((row, frameIndex) => {
+//       if (frameIndex === 0) return;
+//       row.children[index].textContent = sortedArr[frameIndex - 1].textContent;
+//     });
+//   });
 4;
-// selectors.btn.addEventListener('click', function () {})
+// let options = ["1", "2", "3"];
+// let pointer = 0;
+// selectors.table.addEventListener("click", function (e) {
+//   let target = e.target;
+//   target.innerText += "\n" + options[pointer];
+//   pointer == options.length - 1 ? (pointer = 0) : pointer++;
+// });
 5;
 // selectors.btn.addEventListener('click', function () {})
 6;
