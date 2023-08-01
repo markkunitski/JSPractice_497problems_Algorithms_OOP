@@ -35,19 +35,19 @@ import pop from "../../selectors.js";
 // });
 
 5;
-selectors.btn.addEventListener("click", function () {
-  let table = selectors.table;
-  let rows = document.querySelectorAll("table tr");
-  for (let i = 0; i < rows.length; i++) {
-    let children = rows[i].children;
-    if (!children[i]) break;
-    children[i].style.background = "red";
-  }
-  for (let j = 0; j < rows.length; j++) {
-    let children = rows[j].children;
-    if (!children[j]) break;
-    children[children.length - 1 - j].style.background = "red";
-  }
-});
+// selectors.btn.addEventListener("click", function () {
+//   let table = selectors.table;
+//   let rows = document.querySelectorAll("table tr");
+//   for (let i = 0; i < rows.length; i++) {
+//     let children = rows[i].children;
+//     if (!children[i]) break;
+//     children[i].style.background = "red";
+//   }
+//   for (let j = 0; j < rows.length; j++) {
+//     let children = rows[j].children;
+//     if (!children[j]) break;
+//     children[children.length - 1 - j].style.background = "red";
+//   }
+// });
 6;
 // selectors.btn.addEventListener('click', function () {})
