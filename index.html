@@ -123,7 +123,17 @@
     a:hover {
       color: rgb(124, 92, 29);
     }
-
+    #hidden{
+      width: 400px;
+      height: 200px;
+      background: wheat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 1s all ease-in-out;
+      position: absolute;
+      top: -250px;
+    }
   </style>
 
   <body>
@@ -131,6 +141,7 @@
       style="display: flex; align-items: center; flex-direction: column"
       id="root"
     >
+    <div id="hidden"><h2 style="color: white;">Content</h2></div>
       <!-- <canvas
         id="graphCanvas"
         width="400"
@@ -234,6 +245,6 @@
       <td>19</td>
      </tr>
     </table>
-    <script type="module" src="./scripts/9/9-10.js"></script>
+    <script type="module" src="./scripts/10/10-2.js"></script>
   </body>
 </html>
