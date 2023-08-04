@@ -52,40 +52,40 @@ import pop from "../../selectors.js";
 
 // });
 3;
-let arr = ["2", "1", "2", "8", "3", "6"];
-function findLucky() {
-  if (arr.length != 6) throw new Error("has to be 6 digit num");
-  let sorted = arr.sort((a, b) => b - a);
-  let result = [];
-  let leftSum = 0;
-  let rightSum = 0;
-  let pointer = 1;
-  for (let i = 0; i <= 4; i += 2) {
-    let [start, end] = sorted.slice(i, i + 2);
-    let left;
-    let right;
-    console.log(start, end);
-    if (pointer == 1) {
-      left = start;
-      right = end;
-    } else {
-      if (leftSum >= rightSum) {
-        right = start;
-        left = end;
-      } else {
-        right = end;
-        left = start;
-      }
-    }
-    pointer++;
-    leftSum += parseInt(left);
-    rightSum += parseInt(right);
-    result.push(right);
-    result.unshift(left);
-  }
-  console.log(result, leftSum, rightSum, leftSum == rightSum);
-}
-selectors.btn.addEventListener("click", findLucky);
+// let arr = ["2", "1", "2", "8", "3", "6"];
+// function findLucky() {
+//   if (arr.length != 6) throw new Error("has to be 6 digit num");
+//   let sorted = arr.sort((a, b) => b - a);
+//   let result = [];
+//   let leftSum = 0;
+//   let rightSum = 0;
+//   let pointer = 1;
+//   for (let i = 0; i <= 4; i += 2) {
+//     let [start, end] = sorted.slice(i, i + 2);
+//     let left;
+//     let right;
+//     console.log(start, end);
+//     if (pointer == 1) {
+//       left = start;
+//       right = end;
+//     } else {
+//       if (leftSum >= rightSum) {
+//         right = start;
+//         left = end;
+//       } else {
+//         right = end;
+//         left = start;
+//       }
+//     }
+//     pointer++;
+//     leftSum += parseInt(left);
+//     rightSum += parseInt(right);
+//     result.push(right);
+//     result.unshift(left);
+//   }
+//   console.log(result, leftSum, rightSum, leftSum == rightSum);
+// }
+// selectors.btn.addEventListener("click", findLucky);
 // let arr = ['0', '6', '2', '9', '8'];
 // function luckyList() {
 //   let result = [];
@@ -166,4 +166,74 @@ selectors.btn.addEventListener("click", findLucky);
 //       elem.style.background = "lightGray";
 //     }
 //   });
+// });
+7;
+// function makeArray(number) {
+//   let string = String(number);
+//   let result = [];
+//   for (let char of string) {
+//     result.push(char);
+//   }
+//   return [[number], result];
+// }
+// function lowest(initial, fromLast) {
+//   return initial % 10 ** fromLast;
+// }
+// selectors.btn.addEventListener("click", function () {
+//   let devider = parseInt(selectors.inp2.value);
+//   let [num, splitted] = makeArray(parseInt(selectors.inp1.value));
+//   if (!devider || devider == 0 || devider > num)
+//     throw new Error("wrong devider in second input");
+//   let rank = String(devider).length;
+//   let completePart = 0;
+//   do {
+//     console.log(
+//       `We need to find lowest number we are able to devide, lets take the same rank number as our rank = (${rank})`
+//     );
+//     let lastToRank = lowest(num, rank);
+//     console.log(`That number is ${lastToRank}`);
+//     let lastToDevider = Math.floor(lastToRank / devider);
+//     let smallerNum
+//     let canWe;
+//     let newInitial;
+//     if (lastToDevider) {
+//       canWe = "CAN";
+//       completePart += lastToDevider
+//       newInitial = num - (devider * lastToDevider);
+//       console.log(
+//         `Compare our devider to number we got, we ${canWe} devide ${lastToRank} / ${devider}, and ${num} - (${devider} * ${lastToDevider} times) =  ${newInitial} is our new number`
+//       );
+//       num = newInitial;
+//     } else {
+//       canWe = "CAN'T";
+//       newInitial = lowest(num, rank + 1);
+//       console.log(
+//         `Compare our devider to number we got, we ${canWe} devide ${lastToRank} / ${devider}, and ${newInitial} is our new number`
+//       );
+//       rank++;
+//     }
+//   } while (num >= devider);
+//   if (num) {
+//     console.log(`Hurray! That's it! We get ${completePart}. But don't forget that ${num} left`);
+//   } else {
+//     console.log(`Hurray! That's it! We devided our number without fraction and get ${completePart}`);
+//   }
+// });
+8;
+// let data = "10 + 10"; // never use eval()
+// selectors.btn.addEventListener("click", function () {
+//   let [num1, operand, num2] = data.split(" ");
+//   let functions = {
+//     "+": (a, b) => a + b,
+//     "-": (a, b) => a - b,
+//     "*": (a, b) => a * b,
+//     "/": (a, b) => a / b,
+//   };
+//   let func = functions[operand];
+//   console.log(num1, operand, num2);
+//   if (func != undefined) {
+//     console.log(func(Number(num1), Number(num2)));
+//   } else {
+//     throw new Error("wrong data");
+//   }
 // });
