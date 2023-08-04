@@ -52,6 +52,40 @@ import pop from "../../selectors.js";
 
 // });
 3;
+let arr = ["2", "1", "2", "8", "3", "6"];
+function findLucky() {
+  if (arr.length != 6) throw new Error("has to be 6 digit num");
+  let sorted = arr.sort((a, b) => b - a);
+  let result = [];
+  let leftSum = 0;
+  let rightSum = 0;
+  let pointer = 1;
+  for (let i = 0; i <= 4; i += 2) {
+    let [start, end] = sorted.slice(i, i + 2);
+    let left;
+    let right;
+    console.log(start, end);
+    if (pointer == 1) {
+      left = start;
+      right = end;
+    } else {
+      if (leftSum >= rightSum) {
+        right = start;
+        left = end;
+      } else {
+        right = end;
+        left = start;
+      }
+    }
+    pointer++;
+    leftSum += parseInt(left);
+    rightSum += parseInt(right);
+    result.push(right);
+    result.unshift(left);
+  }
+  console.log(result, leftSum, rightSum, leftSum == rightSum);
+}
+selectors.btn.addEventListener("click", findLucky);
 // let arr = ['0', '6', '2', '9', '8'];
 // function luckyList() {
 //   let result = [];
@@ -120,17 +154,16 @@ import pop from "../../selectors.js";
 //   console.log(createPass(7));
 // });
 6;
-selectors.btn.addEventListener('click', function () {
-    let mid = window.innerWidth / 2
-    let elems = document.body.querySelectorAll('*')
-    elems.forEach(elem=>{
-        let rect = elem.getBoundingClientRect()
-       if (rect.right > mid){
-        elem.style.background = 'wheat'
-        return
-       }
-       if (rect.left < mid ){
-        elem.style.background = 'lightGray'
-       }
-    })
-})
+// selectors.btn.addEventListener("click", function () {
+//   let mid = window.innerWidth / 2;
+//   let elems = document.body.querySelectorAll("*");
+//   elems.forEach((elem) => {
+//     let rect = elem.getBoundingClientRect();
+//     if (rect.left < mid && rect.right < mid) {
+//       elem.style.background = "wheat";
+//     }
+//     if (rect.left > mid && rect.right > mid) {
+//       elem.style.background = "lightGray";
+//     }
+//   });
+// });
