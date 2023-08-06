@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="img/psSVG.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/psSVG.svg" type="image/x-icon" />
     <title>Document</title>
   </head>
   <style>
@@ -124,7 +124,7 @@
     a:hover {
       color: rgb(124, 92, 29);
     }
-    #hidden{
+    #hidden {
       width: 400px;
       height: 200px;
       background: wheat;
@@ -148,7 +148,7 @@
       style="display: flex; align-items: center; flex-direction: column"
       id="root"
     >
-    <div id="hidden"><h2 style="color: white;">Content</h2></div>
+      <div id="hidden"><h2 style="color: white">Content</h2></div>
       <!-- <canvas
         id="graphCanvas"
         width="400"
@@ -187,7 +187,15 @@
           </div>
         </div>
       </nav> -->
+      <div id="in1Btns" style="display: flex">
+        <button data-parentid="in1" class="prev"><-</button>
+        <button data-parentid="in1" class="next">-></button>
+      </div>
       <input class="test" type="text" id="in1" />
+      <div id="in2Btns" style="display: flex">
+        <button data-parentid="in2" class="prev"><-</button>
+        <button data-parentid="in2" class="next">-></button>
+      </div>
       <input class="test" type="text" id="in2" />
       <!-- <input class="test" type="text" id="in3" /> -->
       <button id="btn">click</button>
@@ -197,7 +205,10 @@
 
       <ul class="ulclass" id="ul"></ul>
       <div id="text">
-        <p id="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, incidunt!</p>
+        <p id="p1">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut,
+          incidunt!
+        </p>
         <p id="p2"></p>
         <p id="p3"></p>
       </div>
@@ -226,71 +237,127 @@
         <input name="forSelect" type="radio" /> -->
       </div>
     </div>
-    <table style="margin: auto;" id="table">
-     <!-- <tr>
+    <div id="" style="display: flex">
+      <button data-parentid="" id="left"><-</button>
+      <button data-parentid="" id="right">-></button>
+    </div>
+    <table style="margin: auto" id="table">
+      <!-- <tr>
       <th data-method="string">NAME</th>
       <th data-method="string">SURNAME</th>
       <th data-method="number">SALARY</th>
       <th data-method="number">AGE</th>
      </tr> -->
-     <tr>
-      <td>Ivan</td>
-      <td>Biban</td>
-      <td>100</td>
-      <td>31</td>
-      <td>Ivan</td>
-      <td>Biban</td>
-      <td>100</td>
-      <td>31</td>
-     </tr>
-     <tr>
-      <td>Ivan</td>
-      <td>Biban</td>
-      <td>100</td>
-      <td>31</td>
-      <td>Ivan</td>
-      <td>Biban</td>
-      <td>100</td>
-      <td>31</td>
-     </tr>
-     <tr>
-      <td>Ivan</td>
-      <td>Biban</td>
-      <td>100</td>
-      <td>31</td>
-      <td>Ivan</td>
-      <td>Biban</td>
-      <td>100</td>
-      <td>31</td>
-     </tr>
-     <tr>
-      <td>Ivan</td>
-      <td>Biban</td>
-      <td>100</td>
-      <td>31</td>
-      <td>Ivan</td>
-      <td>Biban</td>
-      <td>100</td>
-      <td>31</td>
-     </tr>
-     <tr>
-      <td>Ivan</td>
-      <td>Biban</td>
-      <td>100</td>
-      <td>31</td>
-      <td>Ivan</td>
-      <td>Biban</td>
-      <td>100</td>
-      <td>31</td>
-     </tr>
-     
+      <tr>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>31</td>
+      </tr>
+      <tr>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>31</td>
+      </tr>
+      <tr>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>31</td>
+      </tr>
+      <tr>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>31</td>
+      </tr>
+      <tr>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>31</td>
+      </tr>
+      <tr>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>100</td>
+        <td>31</td>
+      </tr>
+      <tr>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>31</td>
+      </tr>
+      <tr>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>31</td>
+      </tr>
+      <tr>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>31</td>
+      </tr>
     </table>
-    <div id="timer" style="display: flex; justify-content: center;">
-      <h2 id="days"></h2><p>days</p>
-      <h2 id="hours"></h2><p>hours</p>
-      <h2 id="mins"></h2><p>mins</p>
-      <h2 id="sec"></h2><p>sec</p>
+    <div id="timer" style="display: flex; justify-content: center">
+      <h2 id="days"></h2>
+      <p>days</p>
+      <h2 id="hours"></h2>
+      <p>hours</p>
+      <h2 id="mins"></h2>
+      <p>mins</p>
+      <h2 id="sec"></h2>
+      <p>sec</p>
     </div>
-    <script type="module" src="./scripts/10/10-5.js"></script>
+    <script type="module" src="./scripts/10/10-6.js"></script>
   </body>
 </html>
