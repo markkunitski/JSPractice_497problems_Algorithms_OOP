@@ -89,10 +89,61 @@ import pop from "../../selectors.js";
 //   drawElem(row1, row2, direction[directionPointer]);
 // });
 3;
-
+// function generateABC() {
+//   let x1;
+//   let x2;
+//   let a, b, c;
+//   let count = 0
+//   do {
+//     count++
+//     a = Math.floor(Math.random() * 20) + 1;
+//     b = Math.floor(Math.random() * 20) + 1;
+//     c = Math.floor(Math.random() * 20) + 1;
+//     x1 = (-b + (Math.sqrt(b * b - 4 * a * c))) / (2 * a);
+//     x2 = (-b - (Math.sqrt(b * b - 4 * a * c))) / (2 * a);
+//   } while (!(Number.isInteger(x1) && Number.isInteger(x2)));
+//   return [a,b,c]
+// }
+// selectors.btn.addEventListener("click", function(){
+//     let [a, b, c] = generateABC()
+//     console.log(a,b,c)
+//     console.log(`${a}x^2 + ${b}x + ${c} = 0`)
+// });
 4;
-// selectors.btn.addEventListener('click', function () {})
+// selectors.area.addEventListener("keydown", function (e) {
+//   if (e.key == "Tab") {
+//     let selectedArr = window.getSelection().toString().trim().split("\n");
+//     let filtered = selectedArr.map((elem) => (elem = "\t" + elem));
+//     console.log(filtered);
+//     let start = selectors.area.selectionStart;
+//     let end = selectors.area.selectionEnd;
+//     this.value =
+//       this.value.slice(0, start) + filtered.join("\n") + this.value.slice(end);
+//   }
+// });
 5;
-// selectors.btn.addEventListener('click', function () {})
+// selectors.btn.addEventListener("click", function () {
+//   let stack = [];
+//   let initial = selectors.inp1.value;
+//   let opened = "(";
+//   let closed = ")";
+//   for (let bracket of initial) {
+//     if (stack.length === 0) {
+//       stack.push(bracket);
+//       continue;
+//     }
+//     let opposite = bracket == opened ? closed : opened;
+//     let oppositeIndex = stack.indexOf(opposite);
+//     if (oppositeIndex != -1 && opposite == opened) {
+//       stack = [
+//         ...stack.slice(0, oppositeIndex),
+//         ...stack.slice(oppositeIndex + 1),
+//       ];
+//     } else {
+//       stack.push(bracket);
+//     }
+//   }
+//   stack.length ? console.error("NAY") : console.log("YAY");
+// });
 6;
 // selectors.btn.addEventListener('click', function () {})
