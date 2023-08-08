@@ -78,28 +78,75 @@ import pop from "../../selectors.js";
 //   console.log(result)
 // });
 4;
-// let storage = localStorage.getItem("#form");
-// if (storage) {
-//   console.log(storage)
+// function loadForm() {
+//   let localValues = JSON.parse(localStorage.getItem("values"));
+//   let localChecks = JSON.parse(localStorage.getItem("checks"));
+//   localValues.forEach((value) => {
+//     let curr = form.querySelector(`#${value}`);
+//     let stored = JSON.parse(localStorage.getItem(value)) ;
+//     curr.value = stored
+//   });
+//   localChecks.forEach((check) => {
+//     let curr = form.querySelector(`#${check}`);
+//     curr.checked = true;
+//   });
 // }
-function saveForm() {
-  let elems = [...form.children]
-  let savedValues = []
-  let savedChecks = []
-  elems.forEach(elem=>{
-    let id = elem.id
-    if (elem.value && elem.value != ''){
-        localStorage.setItem(id, elem.value)
-        savedValues.push(id)
-    } else if(elem.checked){
-        localStorage.setItem(id, 'checked')
-        savedChecks.push(id)
-    }
-  }) 
-}
-selectors.btn.addEventListener('click', saveForm)
+// function saveForm() {
+//   let elems = [...form.elements];
+//   let valuesId = [];
+//   let checksId = [];
+//   elems.forEach((elem) => {
+//     let id = elem.id;
+//     if (elem.type === "checkbox" || elem.type === "radio") {
+//       if (elem.checked) {
+//         localStorage.setItem(id, "checked");
+//         checksId.push(id);
+//       }
+//     } else if (elem.value) {
+//       localStorage.setItem(id, JSON.stringify(elem.value));
+//       valuesId.push(id);
+//     }
+//   });
+//   localStorage.setItem("values", JSON.stringify(valuesId));
+//   localStorage.setItem("checks", JSON.stringify(checksId));
+// }
 // window.addEventListener("beforeunload", saveForm);
+// window.addEventListener("load", loadForm);
+
 5;
-// selectors.btn.addEventListener('click', function () {})
-6;
-// selectors.btn.addEventListener('click', function () {})
+function moveTO(direction) {
+  let nn5 = document.querySelector("#nn5");
+  let rows = nn5.querySelectorAll("tr");
+  let cells = nn5.querySelectorAll("td");
+  let newTable = document.createDocumentFragment();
+  switch (direction) {
+    case "right":
+      for (let i = 1; i <= rows.length; i++) {
+        let row = document.createElement("tr");
+        let newRow = nn5.querySelectorAll(`tr td:nth-child(${i})`);
+
+        newRow.forEach((elem) => row.prepend(elem));
+        newTable.appendChild(row);
+      }
+      break;
+    case "left":
+      for (let j = 0; j <= rows.length - 1; j++) {
+        let row = document.createElement("tr");
+        let newRow = nn5.querySelectorAll(`tr td:nth-child(${rows.length - j})`);
+
+        newRow.forEach((elem) => row.append(elem));
+        newTable.appendChild(row);
+      }
+      break;
+  }
+  rows.forEach((elem) => elem.remove());
+  nn5.firstElementChild.append(newTable);
+}
+document
+  .querySelector("#nn5left")
+  .addEventListener("click", () => moveTO("left"));
+document
+  .querySelector("#nn5right")
+  .addEventListener("click", () => moveTO("right"));
+
+

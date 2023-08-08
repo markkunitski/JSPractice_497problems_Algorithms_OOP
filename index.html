@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="img/psSVG.svg" type="image/x-icon" />
-    <title>Document</title>
+    <title>JS practice</title>
   </head>
   <style>
     html {
@@ -141,6 +141,40 @@
     .unavaiable {
       background: gray;
     }
+    #form {
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      max-width: 300px;
+    }
+    #num10-9-1 * {
+      margin: 0;
+      padding: 0;
+    }
+    .outer {
+      color: #c5a260;
+    }
+    .name {
+      color: #45acb9;
+    }
+    .text {
+      color: #be5f33;
+    }
+    .num {
+      color: #4e9970;
+    }
+    .ship__1 {
+      background: #45acb9;
+    }
+    .ship__2 {
+      background: #4e9970;
+    }
+    .ship__3 {
+      background: #be5f33;
+    }
+    .ship__4 {
+      background: #c5a260;
+    }
   </style>
 
   <body>
@@ -237,6 +271,7 @@
         <input name="forSelect" type="radio" /> -->
       </div>
     </div>
+    
     <div id="" style="display: flex; justify-content: center">
       <button data-parentid="" id="left"><-</button>
       <button data-parentid="" id="right">-></button>
@@ -258,16 +293,6 @@
         <td>100</td>
         <td>31</td>
         <td>31</td>
-      </tr>
-      <tr>
-        <td>Ivan</td>
-        <td>Biban</td>
-        <td>100</td>
-        <td>31</td>
-        <td>Ivan</td>
-        <td>Biban</td>
-        <td>100</td>
-        <td>31</td>
         <td>31</td>
       </tr>
       <tr>
@@ -280,20 +305,11 @@
         <td>100</td>
         <td>31</td>
         <td>31</td>
-      </tr>
-      <tr>
-        <td>Ivan</td>
-        <td>Biban</td>
-        <td>100</td>
-        <td>31</td>
-        <td>Ivan</td>
-        <td>Biban</td>
-        <td>100</td>
-        <td>31</td>
         <td>31</td>
       </tr>
       <tr>
         <td>Ivan</td>
+        <td>Biban</td>
         <td>Biban</td>
         <td>100</td>
         <td>31</td>
@@ -305,16 +321,18 @@
       </tr>
       <tr>
         <td>Ivan</td>
+        <td>Ivan</td>
         <td>Biban</td>
         <td>100</td>
         <td>31</td>
         <td>Ivan</td>
         <td>Biban</td>
         <td>100</td>
-        <td>100</td>
+        <td>31</td>
         <td>31</td>
       </tr>
       <tr>
+        <td>Ivan</td>
         <td>Ivan</td>
         <td>Biban</td>
         <td>100</td>
@@ -329,6 +347,19 @@
         <td>Ivan</td>
         <td>Biban</td>
         <td>100</td>
+        <td>100</td>
+        <td>31</td>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>100</td>
+        <td>31</td>
+      </tr>
+      <tr>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>100</td>
         <td>31</td>
         <td>Ivan</td>
         <td>Biban</td>
@@ -338,6 +369,31 @@
       </tr>
       <tr>
         <td>Ivan</td>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>31</td>
+      </tr>
+      <tr>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>Ivan</td>
+        <td>Biban</td>
+        <td>100</td>
+        <td>31</td>
+        <td>31</td>
+      </tr>
+      <tr>
+        <td>Ivan</td>
+        <td>Biban</td>
         <td>Biban</td>
         <td>100</td>
         <td>31</td>
@@ -348,7 +404,32 @@
         <td>31</td>
       </tr>
     </table>
-    <form id="form" style="display: flex; flex-direction: column" action="#">
+    <div id="num10-9-1">
+      <pre id="content">
+        #form {
+          margin-inline: auto;
+          max-width: 300px;
+        }
+        #hidden {
+          width: 400px;
+          height: 200px;
+          background: wheat;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 1s all ease-in-out;
+          position: absolute;
+          top: -250px;
+        }
+        .activated {
+          background: wheat;
+        }
+        .unavaiable {
+          background: gray;
+        }
+      </pre>
+    </div>
+    <form id="form" action="#">
       <input type="text" name="" id="formInput1" />
       <input type="text" name="" id="formInput2" />
       <textarea name="" id="formArea" cols="30" rows="10"></textarea>
@@ -363,12 +444,44 @@
       <input type="checkbox" name="formCheckbox" id="formCheckbox1" />
       <input type="checkbox" name="formCheckbox" id="formCheckbox2" />
 
-      <select name="" id="formSelector1">
+      <select name="" id="formSelector2">
         <option value="6">6</option>
         <option value="7">7</option>
         <option value="8">8</option>
       </select>
     </form>
+    <div id="" style="display: flex; justify-content: center">
+      <button data-parentid="" id="nn5left"><-</button>
+      <button data-parentid="" id="nn5right">-></button>
+    </div>
+    <table style="margin-inline: auto" id="nn5">
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>10</td>
+          <td>11</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+          <td>16</td>
+        </tr>
+      </tbody>
+    </table>
     <div id="timer" style="display: flex; justify-content: center">
       <h2 id="days"></h2>
       <p>days</p>
@@ -379,6 +492,6 @@
       <h2 id="sec"></h2>
       <p>sec</p>
     </div>
-    <script type="module" src="./scripts/10/10-8.js"></script>
+    <script type="module" src="./scripts/10/10-9.js"></script>
   </body>
 </html>
