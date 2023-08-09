@@ -123,7 +123,7 @@ function moveTO(direction) {
     case "right":
       for (let i = 1; i <= rows.length; i++) {
         let row = document.createElement("tr");
-        let newRow = nn5.querySelectorAll(`tr td:nth-child(${i})`);
+        let newRow = nn5.querySelectorAll(`tr td:nth-child(1)`);
 
         newRow.forEach((elem) => row.prepend(elem));
         newTable.appendChild(row);
